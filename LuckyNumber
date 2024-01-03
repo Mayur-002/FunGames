@@ -3,7 +3,13 @@ import java.util.Scanner;
 
 public class GuessTheNumber
 {
+	private static Object numtoguess;
+	private static Object userguess;
+
 	public static void main(String[] args) {
+	
+		
+		do {
 		Scanner sc = new Scanner(System.in);
 		Random r = new  Random();
 		int numtoguess = r.nextInt(10)+1;
@@ -17,6 +23,7 @@ public class GuessTheNumber
 		else {
 			System.out.println("OOoops 😔 you are wrong ...better luck next time and the num was : "+ numtoguess);
 		}
+		}while(numtoguess==userguess);
 		
 		
 	}
